@@ -1,4 +1,4 @@
-package com.jlcindia.spring.mvc;
+package com.dt.spring.mvc;
 
 public class ContactCommand {
 	public String getCname() {

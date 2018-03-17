@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>
-		Welcome to Tech World <a href="showaddcontact.jlc">Add Contact</a>
+		Welcome to HomePage <a href="showaddcontact.dt">Add Contact</a>
 	</h1>
 </body>
 </html>

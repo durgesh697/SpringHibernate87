@@ -1,14 +1,17 @@
-package com.jlcindia.spring.mvc;
+package com.dt.spring.mvc;
 
 import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.jlcindia.spring.service.ContactService;
-import com.jlcindia.spring.to.ContactTo;
+
+import com.dt.spring.service.ContactService;
+import com.dt.spring.to.ContactTo;
 
 @Controller
 public class ContactController {
@@ -16,7 +19,7 @@ public class ContactController {
 	@Autowired
 	ContactService cs;
 
-	@RequestMapping(value = {"/showaddcontact.jlc"})
+	@RequestMapping(value = {"/showaddcontact.dt"})
 	protected String showContacPage(Map<String,Object> map) throws Exception {
 		System.out.println("showContactPage");
 		ContactCommand c = new ContactCommand();

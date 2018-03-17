@@ -6,7 +6,7 @@
 <html>
 <body>
 	<h1 align="center">${MSG }</h1>
-	<spring:form action="addcontact.jlc" method="POST"
+	<spring:form action="addcontact.dt" method="POST"
 		commandName="ct">
 		<tr>
 			<td><h1>Add New Contact</h1></td>

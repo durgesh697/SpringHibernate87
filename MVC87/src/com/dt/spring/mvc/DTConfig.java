@@ -1,4 +1,5 @@
-package com.jlcindia.spring.mvc;
+
+package com.dt.spring.mvc;
 
 import java.util.Properties;
 
@@ -21,8 +22,8 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @EnableTransactionManagement
 @Configuration
-@ComponentScan({ "com.jlcindia.spring.*" })
-public class JLCConfig {
+@ComponentScan({ "com.dt.spring.*" })
+public class DTConfig {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -38,10 +39,10 @@ public class JLCConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/jlcindiadb");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/dtdb");
 		dataSource.setUsername("root");
-		dataSource.setPassword("jlcindia");
-		System.out.println("DATASOURCE");
+		dataSource.setPassword("1234");
+		System.out.println("DATASOURCE Working ");
 		return dataSource;
 
 	}
@@ -50,10 +51,10 @@ public class JLCConfig {
 	public LocalSessionFactoryBean sessionFactory(DataSource ds) {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(ds);
-		sessionFactory.setPackagesToScan("com.jlcindia.spring.hibernate");
+		sessionFactory.setPackagesToScan("com.dt.spring.hibernate");
 		Properties props = new Properties();
 		props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-		props.put("hibernate.hbm2ddl.auto", "create");
+		props.put("hibernate.hbm2ddl.auto", "update");
 		props.put("hibernate.show_sql", "true");
 		sessionFactory.setHibernateProperties(props);
 		return sessionFactory;

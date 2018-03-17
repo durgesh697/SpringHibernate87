@@ -1,9 +1,10 @@
-package com.jlcindia.spring.service;
+package com.dt.spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.jlcindia.spring.dao.ContactDAO;
-import com.jlcindia.spring.to.ContactTo;
+
+import com.dt.spring.dao.ContactDAO;
+import com.dt.spring.to.ContactTo;
 
 @Service
 public class ContactService {

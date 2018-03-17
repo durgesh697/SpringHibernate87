@@ -1,9 +1,9 @@
-package com.jlcindia.spring.hibernate;
+package com.dt.spring.hibernate;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name="contacts")
+@Entity // To save the Persistance data in the DB
+@Table(name = "contacts")
 public class Contact {
 
 	static {
@@ -21,15 +21,16 @@ public class Contact {
 	private String cemail;
 	@Column(name = "cphone")
 	private String cphone;
-	
-	public Contact() {}
+
+	public Contact() {
+	}
 
 	public Contact(String cname, String cemail, String cphone) {
 		this.cname = cname;
 		this.cemail = cemail;
 		this.cphone = cphone;
 	}
-    
+
 	public Contact(int cid, String cname, String cemail, String cphone) {
 		super();
 		this.cid = cid;
@@ -70,4 +71,4 @@ public class Contact {
 		this.cphone = cphone;
 	}
 
-	}
+}

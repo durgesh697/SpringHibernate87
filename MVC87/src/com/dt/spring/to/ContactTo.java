@@ -1,4 +1,4 @@
-package com.jlcindia.spring.to;
+package com.dt.spring.to;
 
 public class ContactTo {
 
