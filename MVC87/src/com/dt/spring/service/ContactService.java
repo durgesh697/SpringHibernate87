@@ -1,5 +1,7 @@
 package com.dt.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,11 +18,10 @@ public class ContactService {
 		return cdao.addContact(cto);
 
 	}
-/*
-	@Override
+
 	public List<ContactTo> getAllContacts() {
 		// TODO Auto-generated method stub
-		return contactDAO.getAllContacts();
+		return cdao.getAllContacts();
 	}
-*/
+
 }

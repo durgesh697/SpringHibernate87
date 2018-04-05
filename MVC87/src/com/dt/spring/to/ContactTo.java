@@ -7,12 +7,14 @@ public class ContactTo {
 	private String cemail;
 	private String cphone;
 	
-	public ContactTo(String cname, String cemail, String cphone) {
-		this.cname = cname;
-		this.cemail = cemail;
-		this.cphone = cphone;
+	public ContactTo() {
+//		this.cname = cname;
+//		this.cemail = cemail;
+//		this.cphone = cphone;
 	}
-	
+
+
+
 	public int getCid() {
 		return cid;
 	}

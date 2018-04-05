@@ -19,10 +19,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@EnableWebMvc
+@EnableWebMvc           //  To enable all the Spring MVC Compoent
 @EnableTransactionManagement
-@Configuration
-@ComponentScan({ "com.dt.spring.*" })
+@Configuration       // Imports the Spring MVC configuration from WebMvcConfigurationSupport
+@ComponentScan({ "com.dt.spring.*" })   //Identifying Base Packages
 public class DTConfig {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {

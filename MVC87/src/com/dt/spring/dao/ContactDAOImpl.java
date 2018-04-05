@@ -1,5 +1,8 @@
 package com.dt.spring.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 DT
 */
@@ -36,17 +39,26 @@ public class ContactDAOImpl implements ContactDAO {
 		return true;
 	}
 
-	/*
-	 * <<<<<Add the Contact details>>>>> *
-	 * 
-	 * @Override public List<ContactTo> getAllContacts() { List<ContactTo> cList =
-	 * null; List<Contact> list = (List<Contact>) hTemp.find("from Conatct c"); if
-	 * (list.size() > 0) { cList = new ArrayList<ContactTo>(); for (Contact c :
-	 * list) { ContactTo cto = new ContactTo(); cto.setCid(c.getContactId());
-	 * cto.setCname(c.getContactName()); cto.setCemail(c.getContactEmail());
-	 * cto.setCphone(c.getContactPhone()); cList.add(cto); } }
-	 * 
-	 * return cList; }
-	 */
+	// <<<<<Add the Contact details>>>>>
+
+	public List<ContactTo> getAllContacts() {
+		List<ContactTo> cList = null;
+		List<Contact> list = (List<Contact>) hTemp.find("from Contact c");
+		if (list.size() > 0) {
+			cList = new ArrayList<ContactTo>();
+			for (Contact c : list) {
+				// ContactTo cto = new ContactTo(c.getCname(), c.getCemail(), c.getCphone());
+				ContactTo cto = new ContactTo();
+				cto.setCid(c.getCid());
+				cto.setCname(c.getCname());
+				cto.setCemail(c.getCemail());
+				cto.setCphone(c.getCphone());
+
+				cList.add(cto);
+			}
+		}
+
+		return cList;
+	}
 
 }
